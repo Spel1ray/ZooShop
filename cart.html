@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - PetCare</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="PetCare"></a>
+                <span>PetCare</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск товаров...">
+            <button id="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main class="container cart-page">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> > 
+            <span>Корзина</span>
+        </div>
+        
+        <h1>Корзина</h1>
+        
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-header">
+                    <div class="header-product">Товар</div>
+                    <div class="header-price">Цена</div>
+                    <div class="header-quantity">Количество</div>
+                    <div class="header-total">Итого</div>
+                    <div class="header-remove"></div>
+                </div>
+                
+                <div class="cart-items-list" id="cart-items-list">
+                    <!-- Товары будут загружены через JavaScript -->
+                </div>
+                
+                <div class="cart-actions">
+                    <a href="index.html" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i> Продолжить покупки
+                    </a>
+                    <button class="btn update-cart">Обновить корзину</button>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <h3>Итог заказа</h3>
+                <div class="summary-row">
+                    <span>Промежуточный итог</span>
+                    <span id="subtotal">0.00 Br</span>
+                </div>
+                <div class="summary-row">
+                    <span>Доставка</span>
+                    <span id="shipping">0.00 Br</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Итого</span>
+                    <span id="total">0.00 Br</span>
+                </div>
+                
+                <div class="shipping-methods">
+                    <h4>Способ доставки</h4>
+                    <div class="shipping-option">
+                        <input type="radio" id="shipping-standard" name="shipping" value="standard" checked>
+                        <label for="shipping-standard">
+                            <span>Стандартная доставка</span>
+                            <span>10 Br (бесплатно от 120 Br)</span>
+                        </label>
+                    </div>
+                    <div class="shipping-option">
+                        <input type="radio" id="shipping-express" name="shipping" value="express">
+                        <label for="shipping-express">
+                            <span>Экспресс доставка</span>
+                            <span>20 Br</span>
+                        </label>
+                    </div>
+                    <div class="shipping-option">
+                        <input type="radio" id="shipping-pickup" name="shipping" value="pickup">
+                        <label for="shipping-pickup">
+                            <span>Самовывоз</span>
+                            <span>Бесплатно</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="btn checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>PetCare</h3>
+                <p>Интернет-магазин товаров для животных с 2015 года</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Информация</h3>
+                <ul>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="cart.html">Доставка и оплата</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Белорусская, 21</p>
+                <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                <p><i class="fas fa-envelope"></i> info@petcar.by</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 PetCare. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function loadCart() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartItemsList = document.getElementById('cart-items-list');
+                
+                if (cart.length === 0) {
+                    cartItemsList.innerHTML = `
+                        <div class="empty-cart">
+                            <p>Ваша корзина пуста</p>
+                            <a href="index.html" class="btn">Вернуться в магазин</a>
+                        </div>
+                    `;
+                    document.querySelector('.update-cart').style.display = 'none';
+                    document.querySelector('.checkout-btn').disabled = true;
+                    updateTotals(cart);
+                    return;
+                }
+                
+                cartItemsList.innerHTML = '';
+                
+                cart.forEach(item => {
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.dataset.id = item.id;
+                    cartItem.innerHTML = `
+                        <div class="item-product">
+                            <img src="images/products/${item.image}" alt="${item.name}">
+                            <div class="product-info">
+                                <h4>${item.name}</h4>
+                                <a href="#" class="remove-item" data-id="${item.id}">Удалить</a>
+                            </div>
+                        </div>
+                        <div class="item-price">${item.price.toFixed(2)} Br</div>
+                        <div class="item-quantity">
+                            <input type="number" value="${item.quantity}" min="1">
+                        </div>
+                        <div class="item-total">${(item.price * item.quantity).toFixed(2)} Br</div>
+                        <div class="item-remove">
+                            <button class="remove-btn" data-id="${item.id}"><i class="fas fa-times"></i></button>
+                        </div>
+                    `;
+                    
+                    cartItemsList.appendChild(cartItem);
+                });
+                
+                document.querySelectorAll('.remove-btn, .remove-item').forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        removeFromCart(this.dataset.id);
+                    });
+                });
+                
+                updateTotals(cart);
+                updateCartCount();
+            }
+            
+            function updateCart() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                let cart = [];
+                
+                cartItems.forEach(item => {
+                    const id = item.dataset.id;
+                    const quantity = parseInt(item.querySelector('input').value);
+                    
+                    if (quantity > 0) {
+                        const price = parseFloat(item.querySelector('.item-price').textContent);
+                        const name = item.querySelector('h4').textContent;
+                        const image = item.querySelector('img').src.split('/').pop();
+                        
+                        cart.push({
+                            id,
+                            name,
+                            price,
+                            image,
+                            quantity
+                        });
+                    }
+                });
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCart();
+                showNotification('Корзина обновлена');
+            }
+            
+            function removeFromCart(id) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.id !== id);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCart();
+                showNotification('Товар удален из корзины');
+            }
+            
+            function updateTotals(cart) {
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                document.getElementById('subtotal').textContent = subtotal.toFixed(2) + ' Br';
+                
+                let shipping = 0;
+                const shippingMethod = document.querySelector('input[name="shipping"]:checked').value;
+                
+                if (shippingMethod === 'standard') {
+                    shipping = subtotal >= 120 ? 0 : 10;
+                } else if (shippingMethod === 'express') {
+                    shipping = 20;
+                }
+                
+                document.getElementById('shipping').textContent = shipping.toFixed(2) + ' Br';
+                document.getElementById('total').textContent = (subtotal + shipping).toFixed(2) + ' Br';
+            }
+            
+            function updateShipping() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                updateTotals(cart);
+            }
+            
+            function checkout() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                if (cart.length === 0) {
+                    alert('Ваша корзина пуста');
+                    return;
+                }
+                
+                alert('Заказ оформлен! Спасибо за покупку!');
+                localStorage.removeItem('cart');
+                loadCart();
+                updateCartCount();
+            }
+            
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                document.getElementById('cart-count').textContent = count;
+            }
+            
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+            
+            loadCart();
+            document.querySelector('.update-cart').addEventListener('click', updateCart);
+            document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+                radio.addEventListener('change', updateShipping);
+            });
+            document.querySelector('.checkout-btn').addEventListener('click', checkout);
+        });
+    </script>
+</body>
+</html>

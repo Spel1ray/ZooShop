@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - PetCare</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="PetCare"></a>
+                <span>PetCare</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск товаров...">
+            <button id="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main class="container contacts-page">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> > 
+            <span>Контакты</span>
+        </div>
+        
+        <h1>Контакты</h1>
+        
+        <div class="contacts-container">
+            <div class="contact-info">
+                <h2>Наши контакты</h2>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Адрес:</strong>
+                        <p>г. Минск, ул. Белрусская, 21</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Телефон:</strong>
+                        <p>+375 (44) 462-28-03</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <p>info@petcare.by</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Часы работы:</strong>
+                        <p>Пн-Пт: 9:00-21:00<br>Сб-Вс: 10:00-20:00</p>
+                    </div>
+                </div>
+                
+                <h2>Мы в соцсетях</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i> ВКонтакте</a>
+                    <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Напишите нам</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Тема</label>
+                        <select id="subject" name="subject">
+                            <option value="question">Вопрос по товару</option>
+                            <option value="delivery">Доставка и оплата</option>
+                            <option value="return">Возврат и обмен</option>
+                            <option value="cooperation">Сотрудничество</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="stores">
+            <h2>Наши магазины</h2>
+            <div class="stores-grid">
+                <div class="store">
+                    <h3>Минск, ул. Белорусская, 21</h3>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+                    <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                    <p><i class="fas fa-subway"></i> Станция метро "Площадь Ленина"</p>
+                </div>
+                <div class="store">
+                    <h3>Минск, ул. Белорусская, 21</h3>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+                    <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                    <p><i class="fas fa-subway"></i> Станция метро "Площадь Ленина"</p>
+                </div>
+                <div class="store">
+                    <h3>Минск, ул. Белорусская, 21</h3>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+                    <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                    <p><i class="fas fa-subway"></i> Станция метро "Площадь Ленина"</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>PetCare</h3>
+                <p>Интернет-магазин товаров для животных с 2015 года</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Информация</h3>
+                <ul>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="cart.html">Доставка и оплата</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Белорусская, 21</p>
+                <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                <p><i class="fas fa-envelope"></i> info@petcar.by</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 PetCare. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                document.getElementById('cart-count').textContent = count;
+            }
+            
+            updateCartCount();
+            
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

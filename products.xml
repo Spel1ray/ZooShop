@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="1">
+        <name>Сухой корм для кошек ProPlan Adult</name>
+        <price>50.00</price>
+        <image>cat-food-1.jpg</image>
+        <category>food</category>
+        <animal>cats</animal>
+        <rating>4</rating>
+        <description>Полнорационный сухой корм для взрослых кошек с курицей. Содержит все необходимые витамины и минералы.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="2">
+        <name>Игрушка для кошек "Мячик с перьями"</name>
+        <price>14.00</price>
+        <image>cat-toy-1.jpg</image>
+        <category>toys</category>
+        <animal>cats</animal>
+        <rating>5</rating>
+        <description>Веселая игрушка для активных игр с вашей кошкой. Изготовлена из безопасных материалов.</description>
+        <isNew>true</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="3">
+        <name>Ошейник для собак с гравировкой</name>
+        <price>36.00</price>
+        <image>dog-collar-1.jpg</image>
+        <category>accessories</category>
+        <animal>dogs</animal>
+        <rating>4</rating>
+        <description>Прочный кожаный ошейник с возможностью гравировки имени питомца. Регулируемый размер.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="4">
+        <name>Корм для собак Royal Canin Mini Adult</name>
+        <price>72.00</price>
+        <image>dog-food-1.jpg</image>
+        <category>food</category>
+        <animal>dogs</animal>
+        <rating>5</rating>
+        <description>Специально разработан для маленьких пород собак. Поддерживает здоровье кожи и шерсти.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="5">
+        <name>Клетка для грызунов "Comfort"</name>
+        <price>88.00</price>
+        <image>rodent-cage-1.jpg</image>
+        <category>accessories</category>
+        <animal>rodents</animal>
+        <rating>4</rating>
+        <description>Просторная клетка с пластиковым поддоном и металлическими прутьями. В комплекте поилка и кормушка.</description>
+        <isNew>true</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="6">
+        <name>Корм для попугаев Vitakraft Menu</name>
+        <price>18.00</price>
+        <image>bird-food-1.jpg</image>
+        <category>food</category>
+        <animal>birds</animal>
+        <rating>3</rating>
+        <description>Сбалансированный корм для средних и крупных попугаев. Содержит фрукты, орехи и злаки.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="7">
+        <name>Аквариум 50 литров с подсветкой</name>
+        <price>128.00</price>
+        <image>fish-aquarium-1.jpg</image>
+        <category>accessories</category>
+        <animal>fish</animal>
+        <rating>5</rating>
+        <description>Современный аквариум с LED-подсветкой и системой фильтрации. В комплекте крышка и светильник.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="8">
+        <name>Шампунь для собак "Лаванда"</name>
+        <price>26.00</price>
+        <image>dog-shampoo-1.jpg</image>
+        <category>care</category>
+        <animal>dogs</animal>
+        <rating>4</rating>
+        <description>Нежный шампунь с натуральной лавандой. Подходит для собак с чувствительной кожей.</description>
+        <isNew>true</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="9">
+        <name>Переноска для кошек "Travel"</name>
+        <price>60.00</price>
+        <image>cat-carrier-1.jpg</image>
+        <category>accessories</category>
+        <animal>cats</animal>
+        <rating>4</rating>
+        <description>Удобная пластиковая переноска с металлической дверцей. Вентиляционные отверстия по бокам.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+    
+    <product id="10">
+        <name>Лакомство для собак "Dental Sticks"</name>
+        <price>13.00</price>
+        <image>dog-treat-1.jpg</image>
+        <category>food</category>
+        <animal>dogs</animal>
+        <rating>5</rating>
+        <description>Полезное лакомство для чистки зубов и свежего дыхания вашей собаки.</description>
+        <isNew>false</isNew>
+        <inStock>true</inStock>
+    </product>
+</products>

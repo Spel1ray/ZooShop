@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название товара - PetCare</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="PetCare"></a>
+                <span>PetCare</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск товаров...">
+            <button id="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main class="container product-page">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> > 
+            <a href="#" id="product-category-link">Категория</a> > 
+            <span id="product-name-breadcrumb">Название товара</span>
+        </div>
+        
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="images/products/cat-food-1.jpg" alt="Название товара" id="main-product-image">
+                </div>
+                <div class="thumbnails">
+                    <img src="images/products/cat-food-1.jpg" alt="Миниатюра 1">
+                    <img src="images/products/cat-food-2.jpg" alt="Миниатюра 2">
+                    <img src="images/products/cat-food-3.jpg" alt="Миниатюра 3">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 id="product-title">Сухой корм для кошек ProPlan Adult</h1>
+                <div class="product-meta">
+                    <span class="product-rating">
+                        ★★★★☆ <span class="rating-count">(24 отзыва)</span>
+                    </span>
+                    <span class="product-code">Код: <span id="product-id">1</span></span>
+                    <span class="product-availability in-stock">В наличии</span>
+                </div>
+                
+                <div class="product-price-block">
+                    <span class="price" id="product-price">50.00</span> Br
+                    <span class="old-price">60.00 Br</span>
+                </div>                
+                
+                <div class="product-actions">
+                    <div class="quantity">
+                        <button class="quantity-minus">-</button>
+                        <input type="number" value="1" min="1" id="product-quantity">
+                        <button class="quantity-plus">+</button>
+                    </div>
+                    <button class="btn add-to-cart-btn">В корзину</button>
+                </div>
+                
+                <div class="product-delivery">
+                    <h3>Доставка</h3>
+                    <p><i class="fas fa-truck"></i> Доставка по Минску - 10 Br (бесплатно от 120 Br)</p>
+                    <p><i class="fas fa-box"></i> Самовывоз - бесплатно от нашего магазина</p>
+                    <p><i class="fas fa-clock"></i> Доставка завтра при заказе до 18:00</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Описание</button>
+                <button class="tab-btn" data-tab="characteristics">Характеристики</button>
+                <button class="tab-btn" data-tab="reviews">Отзывы (24)</button>
+                <button class="tab-btn" data-tab="questions">Вопросы (5)</button>
+            </div>
+            
+            <div class="tabs-content">
+                <div class="tab-pane active" id="description">
+                    <h3>Описание товара</h3>
+                    <p id="product-description">Полнорационный сухой корм для взрослых кошек с курицей. Содержит все необходимые витамины и минералы для поддержания здоровья вашего питомца. Формула корма разработана с учетом потребностей взрослых кошек в возрасте от 1 года до 7 лет.</p>
+                    <h3>Преимущества</h3>
+                    <ul>
+                        <li>Поддерживает здоровье мочевыделительной системы</li>
+                        <li>Способствует здоровому пищеварению</li>
+                        <li>Укрепляет иммунитет</li>
+                        <li>Способствует поддержанию идеального веса</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-pane" id="characteristics">
+                    <h3>Характеристики</h3>
+                    <table>
+                        <tr>
+                            <th>Вес упаковки</th>
+                            <td>1.5 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Состав</th>
+                            <td>Курица (минимум 20%), рис, кукуруза, животные жиры, сухое яйцо, рыбий жир, витамины и минералы</td>
+                        </tr>
+                        <tr>
+                            <th>Рекомендации по кормлению</th>
+                            <td>Взрослым кошкам: 50-70 г в день в зависимости от веса и активности</td>
+                        </tr>
+                        <tr>
+                            <th>Страна производитель</th>
+                            <td>Франция</td>
+                        </tr>
+                        <tr>
+                            <th>Срок годности</th>
+                            <td>18 месяцев</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="tab-pane" id="reviews">
+                    <h3>Отзывы покупателей</h3>
+                    <div class="review-form">
+                        <h4>Оставить отзыв</h4>
+                        <form>
+                            <div class="rating-input">
+                                <span>Оценка:</span>
+                                <div class="stars">
+                                    <i class="far fa-star" data-rating="1"></i>
+                                    <i class="far fa-star" data-rating="2"></i>
+                                    <i class="far fa-star" data-rating="3"></i>
+                                    <i class="far fa-star" data-rating="4"></i>
+                                    <i class="far fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Ваше имя" required>
+                            <textarea placeholder="Ваш отзыв" required></textarea>
+                            <button type="submit" class="btn">Отправить отзыв</button>
+                        </form>
+                    </div>
+                    
+                    <div class="reviews-list">
+                        <div class="review">
+                            <div class="review-header">
+                                <span class="review-author">Анна К.</span>
+                                <span class="review-date">15.04.2025</span>
+                                <span class="review-rating">★★★★★</span>
+                            </div>
+                            <div class="review-text">
+                                <p>Отличный корм! Моя кошка ест его с удовольствием уже больше года. Шерсть стала блестящей, проблем с пищеварением нет. Рекомендую!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="review">
+                            <div class="review-header">
+                                <span class="review-author">Иван П.</span>
+                                <span class="review-date">02.04.2025</span>
+                                <span class="review-rating">★★★★☆</span>
+                            </div>
+                            <div class="review-text">
+                                <p>Хороший корм, но немного дороговат. Кошке нравится, ест с аппетитом. Запах приятный, не резкий. Упаковка удобная.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="questions">
+                    <h3>Вопросы и ответы</h3>
+                    <div class="question-form">
+                        <h4>Задать вопрос</h4>
+                        <form>
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="email" placeholder="Ваш email" required>
+                            <textarea placeholder="Ваш вопрос" required></textarea>
+                            <button type="submit" class="btn">Задать вопрос</button>
+                        </form>
+                    </div>
+                    
+                    <div class="questions-list">
+                        <div class="question">
+                            <div class="question-header">
+                                <span class="question-author">Марина С.</span>
+                                <span class="question-date">10.04.2025</span>
+                            </div>
+                            <div class="question-text">
+                                <p>Есть ли в этом корме искусственные красители и консерванты?</p>
+                            </div>
+                            <div class="answer">
+                                <div class="answer-header">
+                                    <span class="answer-author">PetCare</span>
+                                    <span class="answer-date">11.04.2025</span>
+                                </div>
+                                <div class="answer-text">
+                                    <p>Нет, корм ProPlan Adult не содержит искусственных красителей, консервантов и ароматизаторов. Все ингредиенты натуральные.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="related-products">
+            <h2>С этим товаром покупают</h2>
+            <div class="products-grid">
+                <!-- Здесь будут похожие товары -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>PetCare</h3>
+                <p>Интернет-магазин товаров для животных с 2015 года</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Информация</h3>
+                <ul>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="cart.html">Доставка и оплата</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Белорусская, 21</p>
+                <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                <p><i class="fas fa-envelope"></i> info@petcar.by</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 PetCare. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            if (productId) {
+                loadProductData(productId);
+            }
+            
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            const thumbnails = document.querySelectorAll('.thumbnails img');
+            const mainImage = document.getElementById('main-product-image');
+            
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                });
+            });
+            
+            const quantityInput = document.getElementById('product-quantity');
+            const minusBtn = document.querySelector('.quantity-minus');
+            const plusBtn = document.querySelector('.quantity-plus');
+            
+            minusBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                if (value > 1) {
+                    quantityInput.value = value - 1;
+                }
+            });
+            
+            plusBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                quantityInput.value = value + 1;
+            });
+            
+            const addToCartBtn = document.querySelector('.add-to-cart-btn');
+            addToCartBtn.addEventListener('click', function() {
+                const product = {
+                    id: document.getElementById('product-id').textContent,
+                    name: document.getElementById('product-title').textContent,
+                    price: parseFloat(document.getElementById('product-price').textContent),
+                    image: mainImage.src.split('/').pop(),
+                    quantity: parseInt(quantityInput.value)
+                };
+                
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const existingItem = cart.find(item => item.id === product.id);
+                
+                if (existingItem) {
+                    existingItem.quantity += product.quantity;
+                } else {
+                    cart.push(product);
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                
+                this.textContent = 'Добавлено в корзину!';
+                setTimeout(() => {
+                    this.textContent = 'В корзину';
+                }, 2000);
+            });
+            
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                document.getElementById('cart-count').textContent = count;
+            }
+            
+            function loadProductData(id) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'products.xml', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const xmlDoc = xhr.responseXML;
+                        const productNode = xmlDoc.querySelector(`product[id="${id}"]`);
+                        
+                        if (productNode) {
+                            const product = {
+                                id: productNode.getAttribute('id'),
+                                name: productNode.getElementsByTagName('name')[0].textContent,
+                                price: parseFloat(productNode.getElementsByTagName('price')[0].textContent),
+                                image: productNode.getElementsByTagName('image')[0].textContent,
+                                category: productNode.getElementsByTagName('category')[0].textContent,
+                                animal: productNode.getElementsByTagName('animal')[0].textContent,
+                                rating: parseInt(productNode.getElementsByTagName('rating')[0].textContent),
+                                description: productNode.getElementsByTagName('description')[0].textContent,
+                                isNew: productNode.getElementsByTagName('isNew')[0].textContent === 'true',
+                                inStock: productNode.getElementsByTagName('inStock')[0].textContent === 'true'
+                            };
+                            
+                            displayProduct(product);
+                        }
+                    }
+                };
+                xhr.send();
+            }
+            
+            function displayProduct(product) {
+                document.getElementById('product-title').textContent = product.name;
+                document.getElementById('product-price').textContent = product.price.toFixed(2);
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-id').textContent = product.id;
+                
+                const mainImage = document.getElementById('main-product-image');
+                mainImage.src = `images/products/${product.image}`;
+                mainImage.alt = product.name;
+                
+                const categoryLink = document.getElementById('product-category-link');
+                categoryLink.textContent = getCategoryName(product.animal);
+                categoryLink.href = `index.html?animal=${product.animal}`;
+                
+                document.getElementById('product-name-breadcrumb').textContent = product.name;
+                
+                const ratingElement = document.querySelector('.product-rating');
+                ratingElement.innerHTML = `${'★'.repeat(product.rating)}${'☆'.repeat(5 - product.rating)}`;
+                
+                const availabilityElement = document.querySelector('.product-availability');
+                if (product.inStock) {
+                    availabilityElement.textContent = 'В наличии';
+                    availabilityElement.className = 'product-availability in-stock';
+                } else {
+                    availabilityElement.textContent = 'Нет в наличии';
+                    availabilityElement.className = 'product-availability out-of-stock';
+                }
+                
+                loadRelatedProducts(product.animal, product.id);
+            }
+            
+            function getCategoryName(category) {
+                const categories = {
+                    'cats': 'Для кошек',
+                    'dogs': 'Для собак',
+                    'rodents': 'Для грызунов',
+                    'birds': 'Для птиц',
+                    'fish': 'Для рыбок'
+                };
+                return categories[category] || 'Категория';
+            }
+            
+            function loadRelatedProducts(category, excludeId) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'products.xml', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const xmlDoc = xhr.responseXML;
+                        const productNodes = xmlDoc.querySelectorAll(`product[animal="${category}"]:not([id="${excludeId}"])`);
+                        
+                        const relatedProducts = Array.from(productNodes).slice(0, 4).map(node => {
+                            return {
+                                id: node.getAttribute('id'),
+                                name: node.getElementsByTagName('name')[0].textContent,
+                                price: parseFloat(node.getElementsByTagName('price')[0].textContent),
+                                image: node.getElementsByTagName('image')[0].textContent,
+                                rating: parseInt(node.getElementsByTagName('rating')[0].textContent),
+                                isNew: node.getElementsByTagName('isNew')[0].textContent === 'true'
+                            };
+                        });
+                        
+                        displayRelatedProducts(relatedProducts);
+                    }
+                };
+                xhr.send();
+            }
+            
+            function displayRelatedProducts(products) {
+                const container = document.querySelector('.related-products .products-grid');
+                container.innerHTML = '';
+                
+                if (products.length === 0) {
+                    container.innerHTML = '<p>Нет похожих товаров</p>';
+                    return;
+                }
+                
+                products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        ${product.isNew ? '<span class="product-badge">Новинка</span>' : ''}
+                        <img src="images/products/${product.image}" alt="${product.name}">
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <div class="product-rating">
+                                ${'★'.repeat(product.rating)}${'☆'.repeat(5 - product.rating)}
+                            </div>
+                            <div class="product-price">${product.price.toFixed(2)} руб.</div>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="${product.id}">В корзину</button>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    
+                    container.appendChild(productCard);
+                });
+                
+                document.querySelectorAll('.add-to-cart').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const productId = this.getAttribute('data-id');
+                        addToCartFromRelated(productId);
+                    });
+                });
+            }
+            
+            function addToCartFromRelated(id) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'products.xml', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const xmlDoc = xhr.responseXML;
+                        const productNode = xmlDoc.querySelector(`product[id="${id}"]`);
+                        
+                        if (productNode) {
+                            const product = {
+                                id: productNode.getAttribute('id'),
+                                name: productNode.getElementsByTagName('name')[0].textContent,
+                                price: parseFloat(productNode.getElementsByTagName('price')[0].textContent),
+                                image: productNode.getElementsByTagName('image')[0].textContent,
+                                quantity: 1
+                            };
+                            
+                            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                            const existingItem = cart.find(item => item.id === product.id);
+                            
+                            if (existingItem) {
+                                existingItem.quantity += 1;
+                            } else {
+                                cart.push(product);
+                            }
+                            
+                            localStorage.setItem('cart', JSON.stringify(cart));
+                            updateCartCount();
+                            
+                            showNotification('Товар добавлен в корзину');
+                        }
+                    }
+                };
+                xhr.send();
+            }
+            
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

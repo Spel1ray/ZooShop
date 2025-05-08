@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Интернет-магазин зоотоваров</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="home-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="PetCare"></a>
+                <span>PetCare</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск товаров...">
+            <button id="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Все для ваших любимых питомцев</h1>
+            <p>Широкий ассортимент товаров для животных с доставкой по всей стране</p>
+        </section>
+
+        <section class="categories">
+            <h2>Категории товаров</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="cats">
+                    <img src="images/cat-category.jpg" alt="Для кошек">
+                    <h3>Для кошек</h3>
+                </div>
+                <div class="category-card" data-category="dogs">
+                    <img src="images/dog-category.jpg" alt="Для собак">
+                    <h3>Для собак</h3>
+                </div>
+                <div class="category-card" data-category="rodents">
+                    <img src="images/rodent-category.jpg" alt="Для грызунов">
+                    <h3>Для грызунов</h3>
+                </div>
+                <div class="category-card" data-category="birds">
+                    <img src="images/bird-category.jpg" alt="Для птиц">
+                    <h3>Для птиц</h3>
+                </div>
+                <div class="category-card" data-category="fish">
+                    <img src="images/fish-category.jpg" alt="Для рыбок">
+                    <h3>Для рыбок</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-products">
+            <h2>Популярные товары</h2>
+            <div class="filter-bar">
+                <select id="animal-filter">
+                    <option value="all">Все животные</option>
+                    <option value="cats">Кошки</option>
+                    <option value="dogs">Собаки</option>
+                    <option value="rodents">Грызуны</option>
+                    <option value="birds">Птицы</option>
+                    <option value="fish">Рыбки</option>
+                </select>
+                <select id="category-filter">
+                    <option value="all">Все категории</option>
+                    <option value="food">Корм</option>
+                    <option value="toys">Игрушки</option>
+                    <option value="accessories">Аксессуары</option>
+                    <option value="care">Уход</option>
+                    <option value="health">Здоровье</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">Любая цена</option>
+                    <option value="0-20">До 20 Br</option>
+                    <option value="20-40">20-40 Br</option>
+                    <option value="40-80">40-80 Br</option>
+                    <option value="80-">От 80 Br</option> 
+                </select>
+                <button id="reset-filters">Сбросить</button>
+            </div>
+            <div class="products-grid" id="products-container">
+                <!-- Товары будут загружены через JavaScript -->
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Почему выбирают нас?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставка по городу за 2 часа, по стране - 1-3 дня</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Гарантия качества</h3>
+                    <p>Все товары сертифицированы и проверены</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>Поддержка 24/7</h3>
+                    <p>Наши специалисты всегда готовы помочь</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-paw"></i>
+                    <h3>Эксперты по животным</h3>
+                    <p>Поможем с выбором товара для вашего питомца</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>PetCare</h3>
+                <p>Интернет-магазин товаров для животных с 2015 года</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Информация</h3>
+                <ul>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="cart.html">Доставка и оплата</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Белорусская, 21</p>
+                <p><i class="fas fa-phone"></i> +375 (44) 462-28-03</p>
+                <p><i class="fas fa-envelope"></i> info@petcar.by</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 PetCare. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
